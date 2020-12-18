@@ -182,7 +182,7 @@ bot.on('message', message => {
     const command = args.shift().toLowerCase();
     
     if (message.content === `${prefix}help`){
-      message.channel.send('Jinno Helper \n \nPro výpočet AW napiš: ".exp (Tvůj AW level) (Tvoje %)"\nPro zobrazení všech lvlů napiš: ".exp (Tvůj AW level) (Tvoje %) all"');
+      message.channel.send('Jinno Helper \n \nPro výpočet AW napiš: ".exp (Tvůj AW level) (Tvoje %/h)"\nPro zobrazení všech levelů (1-59) napiš: ".exp (Tvůj AW level) (Tvoje %/h) all"');
       }else if (command === 'exp') {
 
 	if (2 > _.size(args) || 3 < _.size(args)) {
@@ -195,8 +195,8 @@ bot.on('message', message => {
     }
 
     const level = (0 === argLevel) ? 1 : argLevel;
-    if ((level < 0 || level > 59)) {
-       return message.channel.send(`Level musí být v intervalu 0 až 59, ${message.author}!`);
+    if ((level <= 0 || level > 59)) {
+       return message.channel.send(`Level musí být v intervalu 1 až 59, ${message.author}!`);
     }
 
     const perHour = Number.parseFloat(_.nth(args, 1));
