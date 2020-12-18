@@ -195,7 +195,7 @@ bot.on('message', message => {
     }
 
     const level = (0 === argLevel) ? 1 : argLevel;
-    if ((level <= 0 || level > 59)) {
+    if ((level < 1 || level > 59)) {
        return message.channel.send(`Level musí být v intervalu 1 až 59, ${message.author}!`);
     }
 
