@@ -1,0 +1,13 @@
+
+{
+  "name": "jinno-bot",
+  "version": "1.0.0",
+  "description": "Aw exp calculator",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Jakub Rejšek",
+  "license": "ISC"
+}
